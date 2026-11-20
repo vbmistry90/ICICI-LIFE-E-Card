@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Sk, Btn } from "@/components/Ui";
 import Marquee from "react-fast-marquee";
 import { DEFAULT_PROFILE } from "@/lib/profile";
-const STATS = [[99.3, "% Claim Settlement", 1], [27900, "Cr Death Claims Paid", 0], [2.2, "Lakh+ Advisors", 1], [25, "Years of Trust", 0]];
+const STATS = [[99.3, "% Claim Settlement ", 1], [27900, "Cr Death Claims Paid", 0], [2.2, "Lakh+ Advisors", 1], [25, "Years of Trust", 0]];
 const SERVICES = ["🛡️ Term Life Insurance", "💰 Savings & Guaranteed Return Plans", "📈 ULIP / Wealth Plans", "👶 Child Education Plans", "🏖️ Retirement & Pension Plans", "🏥 Health & Critical Illness Cover", "🔔 Premium Reminders & Claim Support"];
 function Count({ to, dec }) {
   const [v, setV] = useState(0);
@@ -62,7 +62,7 @@ export default function Home() {
     <Meetings /><div className="card" style={{ animationDelay: ".45s" }}><h2>How I can help you</h2>{SERVICES.map((s) => <div className="svc" key={s}>{s}</div>)}</div>
     <div className="card" style={{ animationDelay: ".6s" }}><LeadForm title="📩 Get a free insurance consultation" /></div>
     <p className="small">{A.addr}<br />ICICI Prudential Life Insurance Co. Ltd. · Helpline 1800 2660<br />Insurance is a subject matter of solicitation.</p></div>
-    <a href="/admin" title="Admin login" aria-label="Admin login" style={{ position: "fixed", right: 16, bottom: 16, width: 46, height: 46, borderRadius: "50%", display: "grid", placeItems: "center", background: "linear-gradient(135deg,#e8472b,#a4123f)", boxShadow: "0 6px 18px #0008", fontSize: 20, zIndex: 8 }}>🔐</a>
+    <a href="/admin" title="Admin login" aria-label="Admin login" style={{ position: "fixed", right: 16, bottom: 55, width: 46, height: 46, borderRadius: "50%", display: "grid", placeItems: "center", background: "linear-gradient(135deg,#e8472b,#a4123f)", boxShadow: "0 6px 18px #0008", fontSize: 20, zIndex: 8 }}>🔐</a>
     {modal && <div className="modal"><div className="card"><LeadForm title="👋 Welcome! Tell me about yourself" onDone={() => setModal(false)} />
       <button className="btn" style={{ width: "100%", marginTop: 10 }} onClick={() => { localStorage.setItem("seen", "1"); setModal(false); }}>Skip for now</button></div></div>}</>);
 }
