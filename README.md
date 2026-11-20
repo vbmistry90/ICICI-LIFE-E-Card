@@ -1,4 +1,3 @@
-
 # Digital Advisor Card (Next.js + MongoDB, Netlify)
 1. `npm install`, copy `.env.example` to `.env.local` and fill it (free MongoDB Atlas cluster; allow 0.0.0.0/0 in Network Access).
 2. `npm run dev` -> card at `/`, admin at `/admin`.

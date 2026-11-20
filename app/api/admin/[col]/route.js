@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { db, ObjectId, isAuthed } from "@/lib/db";
-const OK = ["leads", "policies", "claims", "meetings", "checkins"];
+const OK = ["leads", "policies", "claims", "meetings", "checkins", "quotes"];
 const guard = (req, col) => !isAuthed(req) ? NextResponse.json({ error: "Unauthorized" }, { status: 401 }) : !OK.includes(col) ? NextResponse.json({ error: "Bad" }, { status: 404 }) : null;
 export async function GET(req, { params }) {
   const g = guard(req, params.col); if (g) return g;
